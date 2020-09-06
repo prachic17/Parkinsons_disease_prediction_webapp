@@ -59,10 +59,10 @@ def main():
     
     if st.button("Predict"):
         output=predict_disease(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v)
-        st.success('The probability of suffering is {}'.format(output))
+        st.success('The probability of suffering is {}'.format(output*100))
         
         
-        if output == 0:
+        if output == 1:
             st.markdown(danger_html,unsafe_allow_html=True)
         else:
             st.markdown(safe_html,unsafe_allow_html=True)
